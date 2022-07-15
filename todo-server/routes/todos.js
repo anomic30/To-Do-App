@@ -4,12 +4,11 @@ const router = express.Router();
 
 router.post("/todos", async(req, res) => {
     try {
-        const todo = new Todo({
+        const todo = await new Todo({
             userId: req.body.userId,
             title: req.body.title,
-        });
-        await todo.save();
-        res.status(200).json({message: "Todo created successfully"});
+        }).save();
+        res.status(200).json({todo: todo, message: "Todo created successfully"});
     } catch (err) {
         res.status(500).send(err);
     }

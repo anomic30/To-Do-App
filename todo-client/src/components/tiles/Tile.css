@@ -30,8 +30,17 @@
     padding: 0px 20px;
 }
 
-.tile-actions p{
+.tile-actions .delete-btn{
     color: var(--grey-text);
+}
+
+.tile-actions .delete-btn:hover{
+    color: var(--pink);
+    cursor: pointer;
+}
+
+.tile-actions .delete-btn:active{
+    transform: scale(0.95);
 }
 
 .completed{
