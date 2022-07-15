@@ -102,3 +102,16 @@ header {
     font-size: 1.2rem;
     margin-top: 1.5rem;
 }
+
+
+/* Responsive CSS */
+@media screen and (max-width: 900px){
+    .todos-con .todos-list {
+        justify-content: center;
+    }
+
+    .add-task-con .inp-con input {
+        width: 80%;
+        margin-right: 30px;
+    }
+}

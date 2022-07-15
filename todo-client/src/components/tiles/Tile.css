@@ -57,3 +57,10 @@
     right: -15px;
     width: 2rem;
 }
+
+/* Responsive CSS */
+@media screen and (max-width: 480px){
+    .tile-con{
+        width: 300px
+    }
+}
