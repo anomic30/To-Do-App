@@ -1,0 +1,50 @@
+.tile-con{
+    width: 360px;
+    height: 150px;
+    display: flex;
+    flex-direction: column;
+    background-color: var(--tile-bg);
+    border-radius: 10px;
+    box-shadow: 0px 0px 16px rgba(0,0,0,0.80);
+}
+
+.tile-con .checkmark{
+    display: none;
+}
+
+.tile-header{
+    height: 50%;
+    font-size: 1.2rem;
+    color: white;
+    display: flex;
+    align-items: center;
+    padding: 0px 20px;
+    border-bottom: 2px solid var(--grey-line);
+}
+
+.tile-actions{
+    height: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0px 20px;
+}
+
+.tile-actions p{
+    color: var(--grey-text);
+}
+
+.completed{
+    box-shadow: none;
+    background-color: var(--tiles-completed-bg);
+    border: 1px solid var(--green);
+    position: relative;
+}
+
+.completed .checkmark{
+    display: block;
+    position: absolute;
+    top: 15%;
+    right: -15px;
+    width: 2rem;
+}

@@ -8,7 +8,7 @@
 :root{
   --pink: #C620A7;
   --app-bg: #171717;
-  --tiles-bg: #2F2F2F;
+  --tile-bg: #2F2F2F;
   --tiles-completed-bg: #202020;
   --grey-line: #5C5C5C;
   --grey-text: #AFAFAF;
@@ -27,4 +27,31 @@ body {
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
+}
+
+.button{
+  color: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: var(--pink);
+  height: 35px;
+  border-radius: 4px;
+  min-width: 150px;
+  box-sizing: border-box;
+  padding: 0px 40px;
+  transition: 0.2s;
+}
+
+.button:hover{
+  cursor: pointer;
+}
+
+.button:active{
+  transform: scale(0.95);
+}
+
+.remove{
+  padding: 0;
+  background: none;
 }

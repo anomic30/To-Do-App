@@ -1,3 +1,87 @@
 .App {
+  width: 100%;
+  min-height: 100vh;
+  height: auto;
+  background-color: var(--app-bg);
+  box-sizing: border-box;
+  padding: 40px 20px;
+}
+
+header{
+  height: 5rem;
+  width: 100%;
   text-align: center;
+  color: white;
+  font-size: 22px;
+}
+
+.add-task-con{
+  max-width: 1600px;
+  width: 100%;
+  margin: 0px auto;
+}
+
+.add-task-con p{
+  font-size: 1rem;
+  color: white;
+}
+
+.add-task-con .inp-con{
+  margin: 40px 0px;
+  display: flex;
+}
+
+.add-task-con .inp-con input{
+  color: white;
+  box-sizing: border-box;
+  padding: 5px 15px;
+  font-size: 1rem;
+  width: 50%;
+  height: 35px;
+  background-color: var(--grey-line);
+  outline: none;
+  border: none;
+  border-radius: 4px;
+  margin-right: 50px;
+}
+
+::placeholder { 
+  color: white;
+  opacity: 0.8; 
+}
+
+.todos-con{
+  width: 100%;
+  max-width: 1600px;
+  margin: 0px auto;
+}
+
+.todos-con .action-bar{
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 35px;
+  font-size: 1rem;
+  color: white;
+  margin-bottom: 20px;
+}
+
+.todos-con .todos-list{
+  width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 40px;
+}
+
+.tile-wrapper{
+  display: flex;
+  gap: 10px;
+}
+
+.tile-wrapper .num{
+  color: white;
+  width: 1rem;
+  font-size: 1.2rem;
+  margin-top: 1.5rem;
 }
