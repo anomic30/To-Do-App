@@ -22,7 +22,7 @@ const Todo = () => {
                 title,
                 userId: window.localStorage.getItem('userId')
             }
-            await Axios.post('http://localhost:8080/api/todos', payload).then(res => {
+            await Axios.post('https://revirtspace.herokuapp.com/api/todos', payload).then(res => {
                 setList([...list, res.data.todo]);
                 setTitle("");
                 inputRef.current.value = "";
@@ -35,7 +35,7 @@ const Todo = () => {
 
     const getTasks = async () => {
         try {
-            await Axios.get(`http://localhost:8080/api/todos/${window.localStorage.getItem('userId')}`).then(res => {
+            await Axios.get(`https://revirtspace.herokuapp.com/api/todos/${window.localStorage.getItem('userId')}`).then(res => {
                 setList(res.data);
                 console.log(res);
             })
@@ -46,7 +46,7 @@ const Todo = () => {
 
     const deleteTask = async (id) => {
         try {
-            await Axios.delete(`http://localhost:8080/api/todos/${id}`).then(res => {
+            await Axios.delete(`https://revirtspace.herokuapp.com/api/todos/${id}`).then(res => {
                 setList(list.filter(item => item._id !== id));
                 console.log(res);
             })
@@ -57,7 +57,7 @@ const Todo = () => {
 
     const toggleCompletion = async (id, completed) => {
         try {
-            await Axios.patch(`http://localhost:8080/api/todos/${id}`, { completed: !completed }).then(res => {
+            await Axios.patch(`https://revirtspace.herokuapp.com/api/todos/${id}`, { completed: !completed }).then(res => {
                 setList(list.map(item => {
                     if (item._id === id) {
                         item.completed = !item.completed;
