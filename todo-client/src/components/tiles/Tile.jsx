@@ -14,7 +14,7 @@ const Tile = ({ todo, deleteTask, toggleCompletion }) => {
         <div className={`button ${todo.completed? 'remove': null}`}
           onClick={() => { toggleCompletion(todo._id, todo.completed) }}
         >
-          Mark as completed
+          {todo.completed? "Mark as incomplete":"Mark as completed"}
         </div>
         <div className="delete-btn"
           onClick={() => { deleteTask(todo._id) }}
